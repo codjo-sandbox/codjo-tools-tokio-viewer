@@ -1,0 +1,24 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+    <id>test-project-id</id>
+    <name>test-project-name</name>
+    <description>test-project-description</description>
+    <version>test-project-version</version>
+    <vendor>AGI</vendor>
+    <idea-version since-build="9732"/>
+
+    <actions>
+        <action id="TovioViewerAction"
+                class="net.codjo.tokio.viewer.plugin.TovioViewerAction"
+                text="test-project-name"
+                description="test-project-description">
+
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu.Run" anchor="first"/>
+            <add-to-group group-id="MainToolBar" anchor="after" relative-to-action="HelpTopics"/>
+
+            <keyboard-shortcut first-keystroke="control shift F11" keymap="$default"/>
+        </action>
+    </actions>
+
+</idea-plugin>
