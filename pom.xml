@@ -9,7 +9,7 @@
     <parent>
         <groupId>net.codjo.pom</groupId>
         <artifactId>codjo-pom</artifactId>
-        <version>2.33</version>
+        <version>SNAPSHOT</version>
     </parent>
     <groupId>net.codjo.tools</groupId>
     <artifactId>codjo-tools-tokio-viewer</artifactId>
