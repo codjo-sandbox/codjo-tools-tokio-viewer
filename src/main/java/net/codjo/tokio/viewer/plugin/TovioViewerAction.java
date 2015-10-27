@@ -9,17 +9,12 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.roots.ProjectRootManager;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.vfs.VirtualFile;
-import java.awt.BorderLayout;
-import java.awt.Color;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import javax.swing.BorderFactory;
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.border.EmptyBorder;
 /**
  *
  */
@@ -71,7 +66,7 @@ public class TovioViewerAction extends AnAction {
         Project project = (Project)anActionEvent.getDataContext().getData(DataConstants.PROJECT);
 
         JavaParameters params = new JavaParameters();
-        params.setJdk(ProjectRootManager.getInstance(project).getProjectJdk());
+        params.setJdk(ProjectRootManager.getInstance(project).getProjectSdk());
         params.configureByModule(module, JavaParameters.JDK_AND_CLASSES_AND_TESTS);
 
         String classPath = params.getClassPath().getPathsString();
